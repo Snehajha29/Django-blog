@@ -1,9 +1,15 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+STUDENTS = [
+    {
+        'first_name': 'Sneha',
+        'last_names': '',
+    }
+]
 
 def home(request):
-    return HttpResponse("<h1>Laddu Gopal from Home Page.</h1>")
+    return render(request, 'blog/home.html', {})
 
 def about(request):
-    return HttpResponse("<h1>Laddu Gopal from About Page.</h1>")
+    return render(request, 'blog/about.html', {})
 
